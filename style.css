@@ -1,0 +1,263 @@
+
+
+/*https://stackoverflow.com/questions/19400183/how-to-style-chat-bubble-in-iphone-classic-style-using-css-only*/
+
+body {
+  font-family: helvetica;
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 550;
+}
+/*
+.date {
+  font-size: 85%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #0FF;
+  align-items: center;
+}
+*/
+.date a {
+  font-size: 100%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #AAA;
+  align-items: center;
+}
+
+.date_with_attachment {
+  font-size: 85%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #AAA;
+  align-items: center;
+}
+.timestamp {
+  font-size: 10%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #EEE;
+  align-items: center;
+}
+.timestamp:hover {
+  font-size: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #F31;
+  transition-delay:0.5s;
+  align-items: center;
+}
+.timestamp_with_attachment {
+  font-size: 1%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #EEE;
+  align-items: center;
+}
+.timestamp_with_attachment:hover {
+  font-size: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #F31;
+  transition-delay:0.5s;
+  align-items: center;
+}
+.timestamp_salient {
+  /*font-size: 1%;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  /*color: #EEE;*/
+  align-items: center;
+}
+.chat {
+  /*width: 600px;*/
+  border: solid 1px #EEE;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.messages {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.yours {
+  align-items: flex-start;
+}
+
+.yours .message {
+  margin-right: 25%;
+  background-color: #EEE;
+  position: relative;
+}
+
+.yours .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: #EEE;
+  border-bottom-right-radius: 15px;
+}
+.yours .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+}
+
+.mine {
+  align-items: flex-end;
+}
+
+.mine .message {
+  color: white;
+  margin-left: 25%;
+  background: #47b5f9;
+  position: relative;
+}
+.mine .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: #47b5f9;
+  border-bottom-left-radius: 15px;
+}
+.mine .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+}
+
+.mine_sms {
+  align-items: flex-end;
+}
+.mine_sms .message {
+  color: white;
+  margin-left: 25%;
+  background: #04c545;
+  position: relative;
+}
+.mine_sms .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: #04c545;
+  border-bottom-left-radius: 15px;
+}
+.mine_sms .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+}
+
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push*/
+
+.sidenav {
+  height: 100%;
+  width: 200;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  color: #818181;
+  font-size: 100%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-family: georgia;
+  /*padding-top: 60px;*/
+  margin-left: 0px;
+  
+}
+
+.sidenav a {
+  /*padding: 8px 8px 8px 32px;*/
+  text-decoration: none;
+  
+  /*font-size: 25px;*/
+  color: #818181;
+  /*display: block;*/
+  transition: 0.15s;
+  margin-left: 5px;
+}
+
+.sidenav span {
+  /*padding: 8px 8px 8px 32px;*/
+  text-decoration: none;
+  font-size: 50%;
+  color: #818181;
+  /*display: block;*/
+  transition: 0.3s;
+  margin-left: 5px;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  /*right: 25px;*/
+  font-size: 36px;
+  margin-left: 3px;
+}
