@@ -21,7 +21,7 @@ Arguments = get_Arguments2(
         'time_gap_between_dates' : 10*minutes,
         'max_wordlength' : 40,
         'msg_count_date_gap' : 5,
-        'chat_db' : opjD('kMessages','chat.db'),
+        'chat_db' : opjh('Library/Messages/chat_copy.db'),
         #'Address_book' : Address_book, #opjh('address_book.py'),
         'R' : opjD('kMessages','R.pkl'),
         'Attachments' : opjD('kMessages','Attachments'),
@@ -66,7 +66,7 @@ for h in heics:
 def main(name):
     #cr(name,r=0)
 
-    conn = sqlite3.connect(opjh('Library/Messages/chat-11-5-2021.db'))
+    conn = sqlite3.connect(Arguments['chat_db'])
 
     cur = conn.cursor()
 
